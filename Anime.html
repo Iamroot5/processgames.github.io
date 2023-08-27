@@ -1,0 +1,108 @@
+
+<html>
+<head>
+<html>
+<head>
+    <title>Dynamic Text Update</title>
+    <fieldset style="border-radius:5px;background-color:lightblue">
+      
+    <title>Dynamic Image Update</title>
+    <script>
+        function updateImage() {
+            var images = [
+                "https://i.ibb.co/s6zkV6j/FB-IMG-16930597882397558.jpg",
+                "https://i.ibb.co/THqnfxT/FB-IMG-16930611124952389.jpg",
+                "https://i.ibb.co/pKMv3p8/598126b0-fef3-4d74-8733-50c0b3ca23fa.jpg",
+"https://i.ibb.co/WGk4t0H/0ef32ba41130c40d9dd94b1b495baae0.jpg" ,
+                "https://i.ibb.co/V0GfGwP/FB-IMG-16930615124410795.jpg",
+                "https://i.ibb.co/sb8jsP6/FB-IMG-16930620167531300.jpg",
+                "https://i.ibb.co/Y0yFzRs/FB-IMG-16930623134128373.jpg",
+                "https://i.ibb.co/26h9k1d/FB-IMG-16930626158328382.jpg",
+"https://i.ibb.co/JzgNWyB/FB-IMG-16930630618561799.jpg",
+"https://i.ibb.co/C9S3NgB/FB-IMG-16930633258530323.jpg",
+"https://i.ibb.co/wQzs4L8/ac681c7bb7efe7711c78ee0a6f972b43.jpg" ,
+"https://i.ibb.co/5GN2kxZ/e7fd620bc88ba37f1b161ef32232573a.jpg",
+"https://i.ibb.co/rp8MDSb/0c0d12bf772e58857f7d7309d160e506.jpg",
+"https://i.ibb.co/jJTHXsV/695b59a458e05b286e84234eb7fa4505.jpg" ,
+            ];
+
+            var randomIndex = Math.floor(Math.random() * images.length);
+            var randomImage = images[randomIndex];
+            document.getElementById("image").src = randomImage;
+        }
+
+        setInterval(updateImage, 10000); // Call the function every 10 seconds
+    </script>
+</head>
+<body>
+    <img id="image" src="https://i.ibb.co/hgYJR46/6f42016e73558dece6c08f36eebb9544.jpg"  alt="Initial Image">
+</body>
+</head>
+<a href="Probb.html"><button>words</button></a>
+ <a href=""><button>tricky</button></a>
+<button>Red</button>
+</fieldset>
+<style>
+  button{
+    height:50px;
+    width:15px;
+  }
+body {
+ margin: 0;
+ height: 10vh;
+ display: flex;
+ background:black ;
+}
+
+nav ul {
+ list-style-type: none;
+ padding: 0;
+ 
+}
+
+button {
+ font-size: 40px;
+ font-family: sans-serif;
+ background-color: transparent;
+ border: 1px solid #00dcdc;
+ letter-spacing: 0.1em;
+ width: 7em;
+ height: 1.5em;
+ line-height: 1.5em;
+ position: relative;
+ overflow: hidden;
+ margin: 0.5em;
+ cursor: pointer; 
+ text-align: center;   
+ border-radius: 20px 10px 150px 10px;
+}
+
+button {
+ color: white;
+ mix-blend-mode: difference; 
+}
+
+button::before {
+ border: 1px solid #00ffff;
+ content: '';
+ position: absolute;
+ width: 1em;
+ height: inherit;
+ background-color:  rgba(0, 190, 190, 0.2);
+ /* border-radius: 50%; */
+ top: 0;
+ left: -1.5em;
+ transition: 0.9s ease-in-out; 
+}
+
+button:hover::before {
+ transform: scale(16); 
+}
+
+button:hover {
+ box-shadow: 0 0 20px #00dcdc;
+}
+img{
+  height:150;
+}
+</style>
